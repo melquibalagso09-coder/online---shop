@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Melqui Food Shop</title>
+<title>Melqui Food Shop 🍔</title>
 <style>
 body { font-family: Arial; margin:0; background:#f4f4f4; }
 header { background:#222; color:#fff; padding:15px; display:flex; justify-content:space-between; }
 .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px; padding:20px; }
 .card { background:#fff; padding:15px; border-radius:6px; text-align:center; }
-button { background:#28a745; color:#fff; border:none; padding:8px; cursor:pointer; }
+.card img { width:100%; height:120px; object-fit:cover; border-radius:6px; }
+button { background:#28a745; color:#fff; border:none; padding:8px; cursor:pointer; margin-top:5px; }
 button:hover { background:#218838; }
 .cart { background:#fff; margin:20px; padding:15px; border-radius:6px; }
 </style>
@@ -23,21 +24,25 @@ button:hover { background:#218838; }
 
 <div class="products">
   <div class="card">
+    <img src="https://i.imgur.com/1B0Y6ZB.jpg" alt="Burger">
     <p>Burger</p>
     <p>₱120</p>
     <button onclick="addToCart('Burger')">Add to Cart</button>
   </div>
   <div class="card">
+    <img src="https://i.imgur.com/v4Q5Gfj.jpg" alt="Fries">
     <p>Fries</p>
     <p>₱80</p>
     <button onclick="addToCart('Fries')">Add to Cart</button>
   </div>
   <div class="card">
+    <img src="https://i.imgur.com/2Zy3gG9.jpg" alt="Soft Drink">
     <p>Soft Drink</p>
     <p>₱50</p>
     <button onclick="addToCart('Soft Drink')">Add to Cart</button>
   </div>
   <div class="card">
+    <img src="https://i.imgur.com/9k6B0vL.jpg" alt="Pizza Slice">
     <p>Pizza Slice</p>
     <p>₱150</p>
     <button onclick="addToCart('Pizza Slice')">Add to Cart</button>
