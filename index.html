@@ -2,97 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Melqui Online Shop</title>
+<title>Melqui Food Shop</title>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
-}
-header {
-  background: #222;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-}
-button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-button:hover {
-  background: #218838;
-}
-.cart {
-  padding: 20px;
-}
+body { font-family: Arial; margin:0; background:#f4f4f4; }
+header { background:#222; color:#fff; padding:15px; display:flex; justify-content:space-between; }
+.products { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px; padding:20px; }
+.card { background:#fff; padding:15px; border-radius:6px; text-align:center; }
+button { background:#28a745; color:#fff; border:none; padding:8px; cursor:pointer; }
+button:hover { background:#218838; }
+.cart { background:#fff; margin:20px; padding:15px; border-radius:6px; }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h2>Melqui Online Shop</h2>
+  <h2>Melqui Food Shop 🍔</h2>
   <div>🛒 Cart: <span id="count">0</span></div>
 </header>
 
-<section class="products">
+<div class="products">
   <div class="card">
-    <h3>T-Shirt</h3>
-    <p>₱250</p>
-    <button onclick="addToCart('T-Shirt')">Add to Cart</button>
+    <p>Burger</p>
+    <p>₱120</p>
+    <button onclick="addToCart('Burger')">Add to Cart</button>
   </div>
-
   <div class="card">
-    <h3>Cap</h3>
-    <p>₱180</p>
-    <button onclick="addToCart('Cap')">Add to Cart</button>
+    <p>Fries</p>
+    <p>₱80</p>
+    <button onclick="addToCart('Fries')">Add to Cart</button>
   </div>
-
   <div class="card">
-    <h3>Shoes</h3>
-    <p>₱1,200</p>
-    <button onclick="addToCart('Shoes')">Add to Cart</button>
+    <p>Soft Drink</p>
+    <p>₱50</p>
+    <button onclick="addToCart('Soft Drink')">Add to Cart</button>
   </div>
-</section>
+  <div class="card">
+    <p>Pizza Slice</p>
+    <p>₱150</p>
+    <button onclick="addToCart('Pizza Slice')">Add to Cart</button>
+  </div>
+</div>
 
 <div class="cart">
-  <h3>Cart Items:</h3>
-  <ul id="items"></ul>
-  <button onclick="checkout()">Checkout</button>
+<h3>🛒 Cart Items</h3>
+<ul id="items"></ul>
+<button onclick="checkout()">Checkout</button>
 </div>
 
 <script>
-let cart = [];
 let count = 0;
-
-function addToCart(item) {
-  cart.push(item);
+function addToCart(item){
   count++;
   document.getElementById("count").innerText = count;
-
   let li = document.createElement("li");
-  li.innerText = item;
+  li.textContent = item;
   document.getElementById("items").appendChild(li);
 }
-
-function checkout() {
-  alert("Thank you for shopping! (Demo only)");
+function checkout(){
+  alert("Checkout successful (Demo only)");
 }
 </script>
 
